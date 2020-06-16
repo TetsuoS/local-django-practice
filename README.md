@@ -1,0 +1,1 @@
+# local-django-practice
