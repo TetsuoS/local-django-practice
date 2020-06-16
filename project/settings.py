@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'formdemo.apps.FormdemoConfig', # 新しいアプリの追加
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
