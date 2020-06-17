@@ -1,6 +1,6 @@
 {% block content %}
     <form action="" method="POST">
-        {{ from.as_p }}
+        {{ formdemo_list.as_p }}
         {% csrf_token %}
         <button type="submit">削除</button>
     </form>
