@@ -1,0 +1,10 @@
+<h2><a href="{% url 'formdemo:formdemo_top' %}">Formdemoアプリのトップへ戻る</a></h2>
+
+{% block content %}
+    <form action="" method="POST">
+        {{ formdemo_create.as_p }}
+        {% csrf_token %}
+        <button type="submit">DBへ記録</button>
+    </form>
+
+{% endblock %}

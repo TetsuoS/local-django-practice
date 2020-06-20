@@ -1,0 +1,25 @@
+<h2><a href="{% url 'formdemo:formdemo_top' %}">Formdemoアプリのトップへ戻る</a></h2>
+
+{% block body %}
+
+  <form method="post" action="">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Primary Key</th>
+          <th>Message</th>
+          <th>　</th>{# 追加する #}
+        </tr>
+      </thead>
+      <tbody>
+        {% for detail in details %}
+          <tr>
+            <td>{{ detail.pk }}</td>
+            <td>{{ detail.text }}</td>
+            <td><a href="{% url 'formdemo:formdemo_detail' detail.pk %}">更新画面へ</a></td>{# 追加する #}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+{% endblock %}
